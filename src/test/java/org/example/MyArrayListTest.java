@@ -108,6 +108,12 @@ public class MyArrayListTest {
         assertEquals(JADE, list.get(2));
     }
 
+    @Test
+    void insertShouldThrowWhenIndexInvalid() {
+        assertThrows(IndexOutOfBoundsException.class, () -> list.insert(new Gal("X", 0), -1));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.insert(new Gal("X", 0), 100));
+    }
+
     @ParameterizedTest
     @MethodSource("provideInsertTestData")
     void testInsert(Gal element, int index, Gal expectedElement, int expectedSize) {
