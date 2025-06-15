@@ -103,6 +103,7 @@ public class MyArrayList<T> implements MyList<T> {        // Обобщённы�
         for (int i = 0; i < size - 1; i++) {
 
             for (int j = 0; j < size - 1 - i; j++) {
+
                 T current = (T) elements[j];
                 T next = (T) elements[j + 1];
 
@@ -111,9 +112,11 @@ public class MyArrayList<T> implements MyList<T> {        // Обобщённы�
                     elements[j] = elements[j + 1];
                     elements[j + 1] = (T) temp;
                 }
+
             }
 
         }
+
     }
 
     @Override
