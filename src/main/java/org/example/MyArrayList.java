@@ -119,19 +119,6 @@ public class MyArrayList<T> implements MyList<T> {        // Обобщённы�
     @Override
     public T insert(T element, int index) {
 
-//        if (index < 0 || index >= size) {
-//            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
-//        }
-//
-//        add(element);
-//
-//        for (int i=size; i>=index; i--) {
-//            elements[i] = elements[i-1];
-//        }
-//        elements[index] = element;
-//
-//        return (T) elements[index];
-
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         }
